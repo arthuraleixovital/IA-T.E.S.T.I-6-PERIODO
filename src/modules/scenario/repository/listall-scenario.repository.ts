@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Injectable } from "@nestjs/common";
+import { Injectable, NotFoundException } from "@nestjs/common";
 import { PrismaService } from "../../../shared/databases/prisma.database";
 
 @Injectable()
@@ -8,6 +8,7 @@ export class ListScenarioRepository {
 
     async list(){
         const scenario = await this.prisma.scenario.findMany();
+        if (!scenario) {throw new NotFoundException("Scenario not found");}
         return scenario;
     }
 }

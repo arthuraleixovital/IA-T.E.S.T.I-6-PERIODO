@@ -3,11 +3,11 @@ import { Injectable } from "@nestjs/common";
 import { PrismaService } from "../../../shared/databases/prisma.database";
 
 @Injectable()
-export class FindOneOptionRepository {
+export class FindOneCriterionRepository {
     constructor(private readonly prisma: PrismaService) { }
 
-    async findone(id:string) {
-        const option = await this.prisma.option.findUnique({ where: { id } });
-        return option;
+    async findone(id: string) {
+        const criterion = await this.prisma.criterion.findUnique({ where: { id } });
+        return criterion;
     }
 }

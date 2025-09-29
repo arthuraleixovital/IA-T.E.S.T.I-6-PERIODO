@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-export class CreateOptionDto {
+export class CreateCriterionDto {
     name: string;
     weight: number;
     active: boolean;

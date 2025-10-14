@@ -4,12 +4,18 @@ import { ApiProperty } from "@nestjs/swagger";
 export class CreateScenarioDto {
     @IsString()
     @IsNotEmpty()
-    @ApiProperty()
+    @ApiProperty({
+        description: 'The title of the scenario',
+        example: 'Choose the best programming language'
+    })
     title: string;
 
     @IsString()
     @IsNotEmpty()
-    @ApiProperty()
+    @ApiProperty({
+        description: 'The title of the scenario',
+        example: 'Choose the best programming language'
+    })
     description: string;
     // options: Option[]
 }

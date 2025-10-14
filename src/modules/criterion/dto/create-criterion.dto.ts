@@ -4,22 +4,34 @@ import { IsBoolean, IsDate, IsNotEmpty, IsNumber, IsString } from "class-validat
 export class CreateCriterionDto {
     @IsString()
     @IsNotEmpty()
-    @ApiProperty()
+    @ApiProperty({
+        description: 'The title of the scenario',
+        example: 'Choose the best programming language'
+    })
     name: string;
 
     @IsNumber()
     @IsNotEmpty()
-    @ApiProperty()
+    @ApiProperty({
+        description: 'The title of the scenario',
+        example: 'Choose the best programming language'
+    })
     weight: number;
 
     @IsBoolean()
     @IsNotEmpty()
-    @ApiProperty()
+    @ApiProperty({
+        description: 'The title of the scenario',
+        example: 'Choose the best programming language'
+    })
     active: boolean;
 
     @IsDate()
     @IsNotEmpty()
-    @ApiProperty()
+    @ApiProperty({
+        description: 'The title of the scenario',
+        example: 'Choose the best programming language'
+    })
     createdAt: Date;
     // Scores: Score[];
 }
